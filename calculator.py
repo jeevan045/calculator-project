@@ -4,7 +4,11 @@ def calculate_percentage(total, percentage):
 
 
 while True:
+<<<<<<< HEAD
     print("This is from main branch")
+=======
+    print("This is from feature branch")
+>>>>>>> feature-update
     print("Options: add, subtract, multiply, divide, history,percentage, exit")
     choice = input("Enter choice: ")
 
