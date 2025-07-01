@@ -1,30 +1,37 @@
-def add(x, y):
-    return x + y
+history = []
 
-def subtract(x, y):
-    return x - y
+while True:
+    print("\nSimple Calculator")
+    print("Options: add, subtract, multiply, divide, history, exit")
+    choice = input("Enter choice: ")
 
-def multiply(x, y):
-    return x * y
+    if choice == "exit":
+        break
 
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    return x / y
+    if choice == "history":
+        print("Calculation History:")
+        for item in history:
+            print(item)
+        continue
 
-print("Select operation: +, -, *, /")
-choice = input("Enter choice: ")
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
 
-a = float(input("Enter first number: "))
-b = float(input("Enter second number: "))
+    if choice == "add":
+        result = num1 + num2
+    elif choice == "subtract":
+        result = num1 - num2
+    elif choice == "multiply":
+        result = num1 * num2
+    elif choice == "divide":
+        if num2 != 0:
+            result = num1 / num2
+        else:
+            print("Cannot divide by zero.")
+            continue
+    else:
+        print("Invalid input")
+        continue
 
-if choice == '+':
-    print(add(a, b))
-elif choice == '-':
-    print(subtract(a, b))
-elif choice == '*':
-    print(multiply(a, b))
-elif choice == '/':
-    print(divide(a, b))
-else:
-    print("Invalid input")
+    print("Result:", result)
+    history.append(f"{num1} {choice} {num2} = {result}")
