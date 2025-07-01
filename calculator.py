@@ -1,8 +1,11 @@
 history = []
+def calculate_percentage(total, percentage):
+    return (total * percentage) / 100
+
 
 while True:
     print("\nSimple Calculator")
-    print("Options: add, subtract, multiply, divide, history, exit")
+    print("Options: add, subtract, multiply, divide, history,percentage, exit")
     choice = input("Enter choice: ")
 
     if choice == "exit":
@@ -13,6 +16,10 @@ while True:
         for item in history:
             print(item)
         continue
+    if choice == "percentage":
+        a = float(input("Enter the total"))
+        b = float(input("ENter the number to calculate percentage"))
+        print(calculate_percentage(a,b))
 
     num1 = float(input("Enter first number: "))
     num2 = float(input("Enter second number: "))
