@@ -4,7 +4,7 @@ def calculate_percentage(total, percentage):
 
 
 while True:
-    print("\nSimple Calculator--Version 2")
+    print("This is from main branch")
     print("Options: add, subtract, multiply, divide, history,percentage, exit")
     choice = input("Enter choice: ")
 
